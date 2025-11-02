@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - Secure FinTech App{% endblock %}
+
+{% block content %}
+<h1 style="color: #667eea; margin-bottom: 30px;">Profile Update</h1>
+
+<div class="card">
+    <h3>Update Profile Information</h3>
+    <form method="POST" action="{{ url_for('profile') }}">
+        <div class="form-group">
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" value="{{ profile.full_name or '' }}" maxlength="100">
+            <small style="color: #666;">Max 100 characters</small>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" value="{{ profile.phone or '' }}" maxlength="20">
+            <small style="color: #666;">Max 20 characters</small>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" maxlength="200">{{ profile.address or '' }}</textarea>
+            <small style="color: #666;">Max 200 characters</small>
+        </div>
+        <div class="form-group">
+            <label for="account_number">Account Number (encrypted):</label>
+            <input type="text" id="account_number" name="account_number" value="{{ profile.account_number or '' }}">
+            <small style="color: #666;">This will be encrypted in storage</small>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn">Update Profile</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+

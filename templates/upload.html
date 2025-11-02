@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}File Upload - Secure FinTech App{% endblock %}
+
+{% block content %}
+<h1 style="color: #667eea; margin-bottom: 30px;">File Upload</h1>
+
+<div class="card">
+    <h3>Upload File</h3>
+    <p style="margin-bottom: 15px;">Allowed file types: txt, pdf, png, jpg, jpeg, gif, csv</p>
+    <p style="margin-bottom: 15px;">Maximum file size: 5MB</p>
+    
+    <form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="file">Select File:</label>
+            <input type="file" id="file" name="file" required accept=".txt,.pdf,.png,.jpg,.jpeg,.gif,.csv">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn">Upload File</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
