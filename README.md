@@ -157,9 +157,5 @@ See `TEST_DOCUMENTATION.md` or `Test_Cases.xlsx` for detailed test cases.
 
 ## Author
 
-Created for Cybersecurity Assignment 2
-
-## License
-
-This project is created for educational purposes.
+Mohadis Khan 22I-2273
 
