@@ -123,10 +123,6 @@ This application is designed to support comprehensive security testing including
 - Encryption/Decryption verification
 - Access control testing
 
-## Manual Testing Checklist
-
-See `TEST_DOCUMENTATION.md` or `Test_Cases.xlsx` for detailed test cases.
-
 ## Notes
 
 - **Development Mode**: The app runs with `debug=False` for production-like security
